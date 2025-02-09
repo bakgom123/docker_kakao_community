@@ -65,7 +65,7 @@ const submitPost = async () => {
             //{
                 // const response = await fetch(
             // '/api/posts/create-post',
-            'http://David-kakao-community-env-backend.eba-an3dmmwe.ap-northeast-2.elasticbeanstalk.com/api/posts/create-post',
+            'http://15.164.50.17/api/posts/create-post',
             {
                 method: 'POST',
                 body: formData,

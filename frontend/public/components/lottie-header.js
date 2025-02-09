@@ -14,7 +14,7 @@ class LottieHeader extends HTMLElement {
 
        try {
            const response = await fetch(
-               `http://David-kakao-community-env-backend.eba-an3dmmwe.ap-northeast-2.elasticbeanstalk.com/api/user/profile-image/${email}`,
+               `http://15.164.50.17/api/user/profile-image/${email}`,
                {
                    headers: {
                        Accept: 'application/json',

@@ -206,7 +206,7 @@ class SignupForm {
                 nickname: this.nicknameInput.value,
                 profileImage: this.profileImageData || 'default.webp',
             };
-            fetch('http://David-kakao-community-env-backend.eba-an3dmmwe.ap-northeast-2.elasticbeanstalk.com/api/auth/signup', {
+            fetch('http://15.164.50.17/api/auth/signup', {
             //fetch('http://localhost:3000/auth/signup', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

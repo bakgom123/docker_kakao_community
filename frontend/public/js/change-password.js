@@ -123,8 +123,7 @@ class passwordForm {
         if (!passwordValidation && !passwordConfirmValidation) {
             try {
                 const response = await fetch(
-                    //'http://localhost:3000/user/change-password',
-                    'http://David-kakao-community-env-backend.eba-an3dmmwe.ap-northeast-2.elasticbeanstalk.com/api/user/change-password',
+                    'http://15.164.50.17',
                     {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },

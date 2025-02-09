@@ -2,7 +2,7 @@ export async function handleLogout() {
     try {
         const response = await fetch(
                 //'http://localhost:3000/auth/logout', {
-          'http://David-kakao-community-env-backend.eba-an3dmmwe.ap-northeast-2.elasticbeanstalk.com/api/auth/logout', {
+          'http://15.164.50.17/api/auth/logout', {
             method: 'POST',
             credentials: 'include',
         });

@@ -109,7 +109,6 @@ class LoginForm {
         if (!emailValidation && !passwordValidation) {
             try {
                 const response = await fetch(
-                    //'http://localhost:3000/auth/login',
                     'http://15.164.50.17/api/auth/login',
                     {
                         method: 'POST',
@@ -121,7 +120,7 @@ class LoginForm {
                         }),
                     },
                 );
-
+    
                 if (response.ok) {
                     const data = await response.json();
                     // 로그인 성공: 사용자 정보 로컬 스토리지 저장
@@ -131,10 +130,19 @@ class LoginForm {
                     window.location.href = 'posts.html';
                 } else {
                     const errorData = await response.json();
-                    console.error(errorData.message);
+                    alert(errorData.message || '로그인에 실패했습니다. 다시 시도해주세요.');
                 }
             } catch (error) {
                 console.error('로그인 요청 중 오류 발생:', error);
+                alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+            }
+        } else {
+            // 입력값 유효성 검사 실패 시 알림
+            if (emailValidation) {
+                alert(emailValidation);
+            }
+            if (passwordValidation) {
+                alert(passwordValidation);
             }
         }
     }

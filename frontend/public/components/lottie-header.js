@@ -80,13 +80,6 @@ class LottieHeader extends HTMLElement {
 
    initLottie() {
        const backButton = this.querySelector('#back-button');
-       const lottieAnimation = lottie.loadAnimation({
-           container: backButton,
-           renderer: 'svg',
-           loop: false,
-           autoplay: true,
-           path: '../assets/animation.json',
-       });
        backButton.addEventListener('click', () => {
            window.location.href = 'posts.html';
        });
